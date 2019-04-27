@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>arrows</title>
+</head>
+<body>
+<script>
+  const names = ['sophia', 'bobby', 'injoong'];
+
+  const fullName = names.map(function(name) {
+    return `${name} thompson`
+  });
+
+  const fullName2 = names.map(name => {
+    return `${name} thompson`;
+  });
+
+  const fullName3 = names.map(name => `${name} thompson`);
+
+  console.log(fullName);
+  console.log(fullName2);
+  console.log(fullName3);
+
+  const sayMyName = name => {
+    console.log(`Howdy ${name}`);
+  }
+  sayMyName('bobby');
+
+  const race = '100m Dash';
+  const winners = ['sophia', 'bobby', 'injoong'];
+
+  const win = winners.map((winner, i) => ({name: winner, race, place: i + 1}));
+  console.table(win);
+
+  const ages = [23,24,25,26, 63, 98];
+  const old = ages.filter(age => age >= 60);
+  console.log(old);
+</script>
+</body>
+</html>

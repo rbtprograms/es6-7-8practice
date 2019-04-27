@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>This</title>
+</head>
+<body>
+  <script>
+    function calculateBill(total, tax = .13, tip = .15) {
+      return total + (total * tax) + (total * tip);
+    }
+   //pass undefined if you want to add nothing 
+    const totalBill = calculateBill(100, undefined ,.25);
+    console.log(totalBill);
+  </script>
+
+</body>
+</html>
