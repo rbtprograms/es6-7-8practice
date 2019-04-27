@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>templates</title>
+  <style>
+    .h1 {
+      background: yellow;
+    }
+  </style>
+</head>
+<body>
+<script>
+  //strings will be the string split at variables
+  //values will be an array of the variable values
+  function highLight(strings, ...values) {
+    let str = '';
+    strings.forEach((string, i) => {
+      str += `${string} <span contenteditable class='h1'>${values[i] || ''}</span>`;
+    });
+    return str;
+  }
+
+  const name = 'Bandit';
+  const age = 11;
+  const sentence = highLight`My dogs name is ${name} and he is ${age} years old`;
+  document.body.innerHTML = sentence;
+  console.log('SENTENCE', sentence);
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>arrows</title>
+</head>
+<body>
+<script>
+  const name = 'Bobby';
+  const age = 2;
+  const sentence = `My name is ${name} and my age is ${age}`;
+
+  const person = {
+    name: 'Sophia',
+    job: 'Subbero',
+    city: 'Tampa'
+  }
+
+  //great for making markup dynamically
+  const markup = `
+    <div>
+      <p>${person.name}</p>
+      <p>${person.job}</p>
+    </div>
+  `;
+
+  const dogs = ['chloe', 'bandit', 'nala'];
+  const newMarkup = `
+    <div>
+      ${dogs.map(dog => `
+        <p>${dog}</p>
+      `)}
+    </div>
+  `;
+
+  const song = {
+    name: 'Hello',
+    artist: 'Adele'
+  }
+  const newestMarkup = `
+    <div>
+      <p>${song.name} - ${song.artist}</p>
+      ${song.featuring ? 
+        `(Featuring ${song.featuring})`
+        : ''
+      }
+    </div>
+  `;
+
+  document.body.innerHTML = newestMarkup;
+</script>
+</body>
+</html>
