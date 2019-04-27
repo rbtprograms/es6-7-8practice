@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>let const var</title>
+</head>
+<body>
+<script>
+  const key = 'abc123';
+
+  let points = 50;
+  let winner = false;
+
+  if(points > 40) {
+    //this winner is different than the above
+    let winner = true;
+  }
+
+  //cannot change person can change name
+  const person = {
+    name: 'bobby'
+  }
+  person.name = 'James';
+  console.log(person.name);
+  person.age = 28;
+  //below wont work
+  console.log(person.age);
+  person = { hi: 'there' }
+</script>
+</body>
+</html>

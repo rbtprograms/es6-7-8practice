@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>let const var</title>
+</head>
+<body>
+<script>
+  //var is function scoped, so it doesn't get out of functions but DOES get out of if statement blocks. 
+  //let and const are block scoped so they don't escape
+  var width;
+  function setWidth() {
+    width = 100;
+  }
+  setWidth();
+  console.log(width);
+
+  var age = 100;
+  if(age > 12) {
+    const dogyear = age * 7;
+    console.log(`You are ${dogyear} dog years old`)
+  }
+
+  let height = 200;
+  const key = 'abc123';
+</script>
+</body>
+</html>

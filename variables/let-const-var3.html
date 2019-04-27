@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>let const var</title>
+</head>
+<body>
+<script>
+  //iffi
+  //was a common way to block scope stuff in javascript no longer needed
+  // (function() {
+  //   var name = 'bobby';
+  // })();
+  {
+    const name = 'Bobby';
+  }
+  //vars declared in for loops leak
+  //try this same one with var it will rewrite the global and they will all be 10
+  for(let i = 0; i < 10; i++) {
+    console.log(i);
+    setTimeout(() => {
+      console.log(`The number is ${i}`);
+    });
+  }
+</script>
+</body>
+</html>
