@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tagged Templates</title>
+</head>
+<body>
+<script>
+  
+  const name = 'Bobby';
+
+  const start = name.startsWith('Bo');
+  console.log(start);
+  const end = name.endsWith('by');
+  console.log(end);
+  const include = name.includes('ab');
+  console.log(include);
+  const rep = name.repeat(5);
+  console.log(rep);
+
+  function leftPad(str, amount = 10) {
+    return `${' '.repeat(length = str.length)}${str}`;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>destructure</title>
+</head>
+<body>
+<script>
+  const person = {
+    first: 'bobby',
+    last: 'thompson',
+    age: 28,
+    job: {
+      title: 'engineer',
+      type: {
+        language: 'javascript',
+        eng: 'software'
+      }
+    }
+  }
+
+  const { first, last } = person;
+  const { language } = person.job.type;
+
+  console.log(language);
+
+  const { eng:engineer } = person.job.type;
+  console.log(engineer);
+
+  const settings = { width: 300, color: 'black' }; //needs height, fontsize
+  const { width = 100, height = 100, color = 'blue', fontSize = 5 } = settings;
+  //defaults will not overwrite what is in the object, will onyl be that if there is nothing
+
+  const details = ['hey', 'there', 'cowboy'];
+  const [first1, second, third] = details;
+  console.log(first1, second, third);
+
+  const data = 'Basketball,Sports,90210,23,robert,thompson';
+  const [itemName, category, sku, inventory] = data.split(',');
+
+  const team = ['boby', 'sophia', 'injoong', 'arthur'];
+  const [captain, assitant, ...players] = team;
+  console.log(players);
+
+</script>
+</body>
+</html>

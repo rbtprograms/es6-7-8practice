@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>destructure</title>
+</head>
+<body>
+<script>
+  //neat way to swap
+  let inRing = 'hulk hogan';
+  let onSide = 'the rock';
+  [inRing, onSide] = [onSide, inRing];
+
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GBP: amount * .53,
+      AUD: amount * 1.01,
+      MEX: amount * 13.30
+    };
+    return converted;
+  }
+
+  const { USD, GBP, MEX } = convertCurrency(100);
+  console.log(USD, GBP, MEX);
+
+  function tipCalc({ total, tip = .15, tax = .13 } = {}) {
+    return total + (tip * total) + (tax * total);
+  }
+
+  tipCalc({ total: 200, tip: .2, tax: .13 })
+</script>
+</body>
+</html>
