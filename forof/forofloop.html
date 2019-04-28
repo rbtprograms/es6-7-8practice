@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>destructure</title>
+</head>
+<body>
+  <p>hi</p>
+  <p>hi</p>
+  <p>hi</p>
+  <p>hi</p>
+  <p>hi</p>
+  <p>hi</p>
+  <p>hi</p>
+<script>
+  const cuts = ['bobby', 'suphia', 'ed'];
+
+  cuts.forEach(cut => console.log(cut));
+
+  //this will iterate over everything that is iterable,
+  //including is someone adds onto the prototype of the array
+  //so it can have side effects
+  for(const i in cuts) {
+    console.log(cuts[i]);
+  }
+
+  //this doesn't go over the extra stuff
+  //do this when handling both index and item in an of loop
+  for(const [i, cut] of cuts.entries()) {
+    if(cut === 'bobby') {
+      continue;
+    }
+    console.log(i);
+    console.log(cut);
+  }
+
+  //generates an iterator we can manually iterate with
+  const peeps = cuts.entries();
+
+  function addUpNumbers() {
+    let total = 0;
+    for(num of arguments) {
+      total += num;
+    }
+    return total;
+  }
+  addUpNumbers(12,45,43,6,32,65,78,2,2,54);
+
+  //works on strings!
+  const name = 'bobby';
+  for (const char of name) {
+    console.log(char);
+  }
+
+  //works on nodelists too! good for adding event lsiteners to all types of specific elements
+  const ps = document.querySelectorAll('p');
+  for (const paragraph of ps) {
+    console.log(paragraph);
+  }
+
+  //doesnt work great with objects!
+  //objects are not iterables, however you can use .entries, .values, or .keys to get arrays off of the,
+  const apple = {
+    color: 'red',
+    size: 'medium'
+  }
+
+  for(const [key, value] of Object.entries(apple)) {
+    console.log(key, value);
+  }
+</script>
+</body>
+</html>
