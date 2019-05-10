@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>destructure</title>
+</head>
+<body>
+  <div class="people">
+    <p>Bobby</p>
+    <p>Sophia</p>
+    <p>Caity</p>
+  </div>
+<script>
+  const peopleArray = Array.from(document.querySelectorAll('.people p'), person => {
+    return person.textContent;
+  });
+
+  function sumAll() {
+    //convert arraylike structure to array
+    const nums = Array.from(arguments);
+    return nums.reduce((acc, cur) => acc + cur, 0);
+  }
+  sumAll(2,54,6,2,44,6,887,43,65,75,34,32)
+
+  const arr = Array.of(5,6,2,84,'hello', false, { hi: 'yes' });
+  console.log(arr);
+</script>
+</body>
+</html>
