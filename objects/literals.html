@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>literals</title>
+</head>
+<body>
+<script>
+  const first = 'bandit';
+  const age = 9;
+  const breed = 'Papillon'
+
+  const dog = {
+    first,
+    age,
+    breed
+  }
+
+  console.log(dog);
+
+  //the same method declaration
+  const modal = {
+    create(selector) {
+
+    },
+    open(content) {
+
+    },
+    close: function(byebye) {
+
+    }
+  }
+
+  function invertColor(color) {
+    return '#' + ('000000' + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+  }
+
+  const key = 'pocketColor';
+  const value = 'ffc600';
+
+  //can compute properties inside your objects!
+  const tshirt = {
+    [key]: value,
+    [`${key}Opposite`]: invertColor(value)
+  }
+
+  console.log(tshirt);
+
+  const keys = ['size', 'color'];
+  const values = ['medium', 'red'];
+
+  const shirt = {
+    [keys.shift()]: values.shift(),
+    [keys.shift()]: values.shift()
+  }
+
+  console.log(shirt);
+</script>
+</body>
+</html>
