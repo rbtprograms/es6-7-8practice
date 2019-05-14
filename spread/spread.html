@@ -6,18 +6,31 @@
   <title>destructure</title>
 </head>
 <body>
+    <p>Bobby</p>
+    <p>Subby</p>
 <script>
+  //can use to make an array like Array.from
+  const people = [...document.querySelector('p')];
+  const names = people.map(person => person.textContent);
+
   const featured = ['pizza', 'burger', 'chicken'];
   const specialty = ['pasta', 'meatballs'];
 
   const menu = [...featured, 'hotdog', ...specialty];
-  
   
   const deepDish = {
     pizzaName: 'deep dish',
     size: 'Medium',
     ingredients: ['dough', 'sauce', 'pepperoni']
   };
+
+  const shoppingList = ['Milk', 'Flower', ...deepDish.ingredients];
+  console.log(shoppingList);
+
+  const ingedientIndex = deepDish.ingredients.findIndex(ingred => ingred === 'sauce');
+
+  //how to get rid of one
+  const newIngred = [...deepDish.ingredients.slice(0, ingredientIndex), ...deepDish.ingredients.slice(ingredientIndex + 1)];
 </script>
 </body>
 </html>

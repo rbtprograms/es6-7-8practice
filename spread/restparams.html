@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rest</title>
+</head>
+<body>
+<script>
+  //collects many items and puts them into an array
+  function convertCurrency(rate, ...amounts) {
+    return amounts.map(amount => amount * rate);
+  }
+  convertCurrency(1.54, 10, 6, 3, 20, 65);
+
+  const runner = ['Bobby', 123, 5.5, 6, 8, 32, 4, 6];
+  //runs will be the remaining values in an array
+  const [name, id, ...runs] = runner;
+  console.log(runs);
+
+  const team = ['Bobby', 'Sophia', 'Injoong', 'Arthur'];
+  const [captain, assistant, ...players] = team;
+  //rest is specific but its useful when you need it
+</script>
+</body>
+</html>

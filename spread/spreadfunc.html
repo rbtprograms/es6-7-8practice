@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>destructure</title>
+</head>
+<body>
+<script>
+  //can use to make an array like Array.from
+  const inventors = ['Einstein', 'Galileo', 'Stu Pickles'];
+  const newInventors = ['Steve Jobs', 'Elon Musk'];
+
+  inventors.push(...newInventors);
+
+  const name = ['Bobby', 'T'];
+  function sayHi(first, last) {
+    console.log(`Hey there ${first} ${last}`);
+  }
+  sayHi(...name);
+</script>
+</body>
+</html>
