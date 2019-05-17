@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>symbols</title>
+</head>
+<body>
+<script>
+  //synbols are UNIQUE
+  //pass the symbol a descriptor
+  const bob = Symbol('Bob');
+  const person = Symbol('Bob');
+
+  const classRoom = {
+
+    [Symbol('Mark')]: { grade: 50, gender: 'male'},
+    [Symbol('Olivia')]: { grade: 80, gender: 'female'},
+    [Symbol('Olivia')]: { grade: 75, gender: 'female'}
+  }
+
+  const syms = Object.getOwnPropertySymbols(classRoom);
+  const data = syms.map(sym => classRoom[sym]);
+</script>
+</body>
+</html>
