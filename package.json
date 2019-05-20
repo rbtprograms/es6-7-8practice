@@ -1,0 +1,13 @@
+{
+  "name": "es6-7-8practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/rbtprograms/es6-7-8practice.git",
+  "author": "<rbtprograms@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-html": "5.0.5",
+    "eslint-plugin-markdown": "1.0.0"
+  }
+}
