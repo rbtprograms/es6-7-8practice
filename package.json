@@ -4,6 +4,5 @@
   "main": "index.js",
   "repository": "https://github.com/rbtprograms/es6-7-8practice.git",
   "author": "<rbtprograms@gmail.com>",
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>inherit</title>
+</head>
+<body>
+<script>
+
+  class Dog {
+    constructor(name, breed) {
+      this.name = name;
+      this.breed = breed;
+      this.bark = () => {
+        console.log(`Bark Bark! My name is ${name}`);
+      }
+    }
+
+    cuddle() {
+      console.log(`I love you!`);
+    }
+
+    //this doesnt get inherited when new instances are created
+    static info() {
+      console.log('Dogs are best');
+    }
+
+    //getters and setters are just for writing and reading info on the class after its created
+    get description() {
+      return `${this.name} is a ${this.breed} type of dog`;
+    }
+
+    set nickName(value) {
+      this.nick = value.trim();
+    }
+
+    get nickName() {
+      return this.nick;
+    }
+  }
+
+  const bandit = new Dog('Bandit', 'Papillion');
+  const chloe = new Dog('Chloe', 'Papillion');
+
+</script>
+</body>
+</html>

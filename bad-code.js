@@ -1,10 +1,13 @@
+
+twttr.track();
+
 const weather = new Promise((resolve) => {
   setTimeout(() => {
     resolve({ temp: 29, conditions: 'Sunny with Clouds' });
   }, 2000);
 });
 
-const tweets = new Promise((resolve) => {
+const tweets = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(['I like cake', 'BBQ is good too!']);
   }, 500);
