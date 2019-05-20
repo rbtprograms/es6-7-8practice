@@ -4,10 +4,6 @@
     "browser": true,
     "node": true
   },
-  // "extends": "airbnb",
-  "rules": {
-    "no-console": 0,
-    "no-unused-vars": 1
-  },
+  "extends": "airbnb",
   "plugins": ["html", "markdown"]
 }
