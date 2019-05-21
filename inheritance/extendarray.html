@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>inherit</title>
+</head>
+<body>
+<script>
+
+  class MovieCollection extends Array {
+    constructor(name, ...items) {
+      super(...items);
+      this.name = name;
+    }
+    add(movie) {
+      this.push(movie);
+    }
+    topRated(limit = 10) {
+      return this.sort((a, b) => (a.stars > b.stars ? -1 : 1)).slice(0, limit);
+    }
+  }
+
+  const movies = new MovieCollection('Bobby\s fav movies', 
+    { name: 'Battlefield Earth', stars: 9 },
+    { name: 'The room', stars: 10 },
+    { name: 'Paul Blart: Mall Cop', stars: 50 }
+  );
+
+  for(const movie of movies) {
+    console.log(movie);
+  }
+
+</script>
+</body>
+</html>
