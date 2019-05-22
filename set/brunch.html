@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>set</title>
+</head>
+<body>
+<script>
+  const brunch = new Set();
+
+  brunch.add('bobby');
+  brunch.add('subby');
+  brunch.add('Steph');
+
+  //items remove themselves from the set as the they are read
+  const line = brunch.values();
+  console.log(line.next().value);
+  console.log(line.next().value);
+  console.log(line);
+
+  brunch.add('JV');
+  brunch.add('Injoong');
+</script>
+</body>
+</html>

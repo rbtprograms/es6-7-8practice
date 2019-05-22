@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>set</title>
+</head>
+<body>
+<script>
+  let dog1 = { name: 'Bandit', age: 10 };
+  let dog2 = { name: 'Chloe', age: 13 };
+  //weak sets can onyl take objects and they cannot be iterated over
+  const dogs = new WeakSet([dog1, dog2]);
+
+  //weakSets do not have a .clearMethod because they garbage collect themselves
+  //automatically go away
+
+  console.log(dogs);
+  dog1 = null;
+  console.log(dogs);
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>set</title>
+</head>
+<body>
+<script>
+  const people = new Set();
+  people.add('Bobby');
+  people.add('Sophia');
+
+  //will create a generator
+  const values = people.values();
+
+  const students = new Set(['Subby', 'Bubby']);
+  console.log(students.has('Bubby'));
+  console.log(students.has('Sophia'));
+</script>
+</body>
+</html>
