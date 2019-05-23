@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>map</title>
+</head>
+<body>
+    <button>yes</button>
+    <button>no</button>
+    <button>maybe</button>
+<script>
+  //objects can be the keys in maps
+  const clickCounts = new Map();
+  const buttons = document.querySelectorAll('button');
+
+  buttons.forEach(button => {
+    clickCounts.set(button, 0);
+    button.addEventListener('click', function() {
+      const val = clickCounts.get(this);
+      console.log(val);
+      clickCounts.set(this, val + 1);
+    });
+  });
+
+  //WEAKMAP
+  //same as weakset it gets garbage collected and cannot loop over
+</script>
+</body>
+</html>
